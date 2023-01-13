@@ -12,13 +12,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/index.css">
   <title>Document</title>
 </head>
 <body>
   <div class="container">
     <form action="insert.php" method="POST" class="form">
       <div class="title">
-        <h1>Crear usuarios</h1>
+        <h1>Create Users</h1>
       </div>
       <div class="input">
         <input type="text" name="name" placeholder="Name">
@@ -30,41 +31,7 @@
       <div class="button">
         <button type="submit">Create</button>
     </form>
-  </div>
-
-  <div class="table">
-    <div class="tittle">
-      <h1>Users registered</h1>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Lastname</th>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Password</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <?php while($row = mysqli_fetch_array($query)): ?>
-        <tr>
-          <th> <?= $row['id'] ?> </th>
-          <th> <?= $row['name'] ?> </th>
-          <th> <?= $row['lastname'] ?> </th>
-          <th> <?= $row['username'] ?> </th>
-          <th> <?= $row['email'] ?> </th>
-          <th> <?= $row['password'] ?> </th>
-  
-          <th><a href="update.php?id=<?= $row['id'] ?>">Edit</a></th>
-          <th><a href="delete.php?id=<?= $row['id'] ?>">Delete</a></th>
-        </tr>
-        <?php endwhile ?>
-    </tbody>
+    <button><a href="registered.php">show</a></button>
   </div>
 </body>
 </html>

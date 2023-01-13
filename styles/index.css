@@ -1,0 +1,33 @@
+html{
+  text-align: center;
+}
+
+body{
+    background-color: #82AAE3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  border-radius: 7px;
+  border: 2px solid #FFFFFF;
+  background-color: rgb(255, 8, 202);
+  padding: 10px;
+}
+
+.form{
+  width: 20%;
+  height: 20%;
+  padding: 50px;
+  background-color: #EAFDFC;
+}
