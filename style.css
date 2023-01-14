@@ -1,0 +1,119 @@
+html{
+  text-align: center;
+
+}
+
+body{
+    background-color: #f6fdff;
+    /* font-family: 'montserrat', sans-serif ; */
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  width: 100%;
+  height: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  /* border: 2px solid #FFFFFF;
+  background-color: #b3b4c44f; */
+  
+}
+
+.son{
+  width: 50%;
+  height: 50%;
+  background-color: #b9e2e5;
+  /* display: flex;  */
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FFFFFF;
+  padding: 9px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  border-radius: 7px;
+}
+
+h1{
+  font-size: 27px;
+  color: #302f2f;;
+  font-family: 'hauora', sans-serif;
+  padding: auto;
+}
+
+.form{
+  width: 50%;
+  height: 50%;
+  padding: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7f5f5;
+  align-items: center;
+  /* text-align: left; */
+  margin-left: 20vh;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form .row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-place a  {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button{
+  width: 100px;
+  height: 40px;
+  background-color: #83b2b6;
+  color: #3a3a3a;
+  border: none;
+  border-radius: 20px;
+  /* padding: 12px 20px;
+  margin: 8px 0; */
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button:hover{
+  background-color: #b9e2e5;
+}
