@@ -17,13 +17,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
     <div class="son">
       <form action="insert.php" method="POST" class="form">
           <h1>Create Users</h1>
         <div class="input">
           <div class="row">
-            <div class="col">
+            <div id="name" class="col">
               <input 
               type="text"
               name="name" 
@@ -31,7 +30,7 @@
               placeholder="Name"
               >
             </div>
-            <div class="col">
+            <div id="lname" class="col">
               <input 
               type="text" 
               name="lastname" 
@@ -60,11 +59,48 @@
           autocomplete="off"
           placeholder="Password"
           >
+          <div class="button" >
+            <button type="submit" class="btn"><a href="index.php">Create</a></button>
+          </div>
+          <!-- <button class="btn" id="show"><a href="registered.php">show</a></button> -->
         </div>
-          <button type="submit" class="btn"><a href="index.php">Create</a></button>
-        </form>
-        <button type="submit" class="btn"><a href="registered.php">show</a></button>
-
+      </form>
     </div>
-  </div>
+
+    <div class="table">
+        <div class="tittle">
+          <h1>Users registered</h1>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Lastname</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php while($row = mysqli_fetch_array($query)): ?>
+            <tr>
+              <th> <?= $row['id'] ?> </th>
+              <th> <?= $row['name'] ?> </th>
+              <th> <?= $row['lastname'] ?> </th>
+              <th> <?= $row['username'] ?> </th>
+              <th> <?= $row['email'] ?> </th>
+              <th> <?= $row['password'] ?> </th>
+      
+              <th><a href="update.php?id=<?= $row['id'] ?>">Edit</a></th>
+              <th><a href="delete.php?id=<?= $row['id'] ?>">Delete</a></th>
+            </tr>
+            <?php endwhile ?>
+        </tbody>
+      </div>
+
+</body>
 </html>
