@@ -144,18 +144,36 @@ button:hover{
   margin: auto auto;
   align-items: center;
   justify-content: center;
-
-  background-color: #f7f5f5;
+  background-color: #d4e2df;
   border-radius: 7px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 table{
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(99, 0, 0);
   border-radius: 4px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  table-layout: fixed;
+}
+
+thead{
+  background-color: #83b2b6;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+tr{
+  background-color: #f7f5f5;
+  color: #3a3a3a;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
