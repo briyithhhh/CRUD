@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Document</title>
 </head>
@@ -28,6 +28,10 @@
               name="name" 
               autocomplete="off"
               placeholder="Name"
+              onblur="validar(this)" 
+              onkeyup="validar(this)"
+              validarLong(this, 3)
+              required
               >
             </div>
             <div id="lname" class="col">
@@ -36,6 +40,10 @@
               name="lastname" 
               autocomplete="off"
               placeholder="Lastname"
+              onblur="validar(this)" 
+              onkeyup="validar(this)"
+              validarLong(this, 3)
+              required
               >
             </div>
           </div>
@@ -45,6 +53,10 @@
           name="username"
           autocomplete="off"
           placeholder="Username"
+          onblur="validar(this)" 
+          onkeyup="validar(this)"
+          validarLong(this, 3)
+          required
               >
           </div>
           <input 
@@ -52,23 +64,31 @@
           name="email" 
           autocomplete="off"
           placeholder="Email"
+          onblur="validar(this)" 
+          onkeyup="validar(this)" 
+          validarLong(this, 9)
+          required
           >
           <input 
           type="password" 
           name="password" 
           autocomplete="off"
           placeholder="Password"
+          onblur="validar(this)" 
+          onkeyup="validar(this)" 
+          validarLong (this, 6)
+          required
           >
           <div class="button" >
             <button type="submit" class="btn"><a href="index.php">Create</a></button>
           </div>
-          <!-- <button class="btn" id="show"><a href="registered.php">show</a></button> -->
+          
         </div>
       </form>
     </div>
 
     <div class="table">
-        <div class="tittle">
+        <div class="tittle-users">
           <h1>Users registered</h1>
         </div>
         <table>
@@ -85,7 +105,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody class="tabla-body">
             <?php while($row = mysqli_fetch_array($query)): ?>
             <tr>
               <th> <?= $row['id'] ?> </th>
@@ -95,12 +115,54 @@
               <th> <?= $row['email'] ?> </th>
               <th> <?= $row['password'] ?> </th>
       
-              <th><a href="update.php?id=<?= $row['id'] ?>">Edit</a></th>
-              <th><a href="delete.php?id=<?= $row['id'] ?>">Delete</a></th>
+              <th id="edit"><a href="update.php?id=<?= $row['id'] ?>">✏️</a></th>
+              <th id="edit"><a href="delete.php?id=<?= $row['id'] ?>">🗑️</a></th>
             </tr>
             <?php endwhile ?>
         </tbody>
       </div>
 
 </body>
+
+<!--VALIDACION DE CAMPOS-->
+
+<script type="text/javascript">
+            function validar(elemento) {
+                if(elemento.value==''){
+                    elemento.className="error";
+                }else{
+                    elemento.className="input";
+                }
+            } 
+            
+            // function validar(elemento){
+            //     if(elemento.value.length < 9){
+            //         var data = elemento.className='error';
+            //     }else{
+            //         elemento.className='input';
+            //     }
+            // }
+
+            // function validarPass(elemento){
+            //     if(elemento.value.length < 6){
+            //         var data = elemento.className='error';
+            //     }else{
+            //         elemento.className='input';
+            //     }
+            // }
+    
+            function validarLong(elemento,min){
+                if(elemento.value==''){
+                    var data = elemento.value;
+                    if(data.length<min){
+                        elemento.className='error';
+                    }else{
+                        elemento.className='input';
+                    }
+                }
+            }
+    
+            
+        </script>
+
 </html>

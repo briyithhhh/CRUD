@@ -6,13 +6,12 @@ body{
   width: 50%;
   height: 50%;
   margin: auto auto;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
   background-color: #B9E2E5;
   padding: 20px;
   border-radius: 7px;
   border: 1px solid #FFFFFF;
+  margin-top: 20px;
 }
 
 form{
