@@ -2,16 +2,18 @@ body{
   background-color: #F6FDFF;
 }
 
-.container{
+.container {
   width: 50%;
   height: 50%;
   margin: auto auto;
   justify-content: center;
   align-items: center;
-  background-color: #2e9ebd;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+  background-color: #B9E2E5;
   padding: 20px;
+  border-radius: 7px;
+  border: 1px solid #FFFFFF;
 }
-
 
 .form{
     width: 50%;
@@ -23,7 +25,7 @@ body{
     padding: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #f7f5f5;
+    background-color: #F7F5F5;
     align-items: center;
     border-radius: 7px;
   }
@@ -46,4 +48,11 @@ body{
   
   input:focus {
     outline: none;
+  }
+
+  h1{
+    font-size: 27px;
+    color: #302f2f;;
+    font-family: 'hauora', sans-serif;
+    padding: auto;
   }
