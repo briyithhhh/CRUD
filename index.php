@@ -13,12 +13,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
+  <link
 
   <title>Document</title>
 </head>
 <body>
     <div class="son">
-      <form action="insert.php" method="POST" class="form">
+    <form action="insert.php" method="POST" class="form">
           <h1>Create Users</h1>
         <div class="input">
           <div class="row">
@@ -28,10 +29,8 @@
               name="name" 
               autocomplete="off"
               placeholder="Name"
-              onblur="validar(this)" 
-              onkeyup="validar(this)"
-              validarLong(this, 3)
               required
+              oninput="validateName(this)"
               >
             </div>
             <div id="lname" class="col">
@@ -40,10 +39,8 @@
               name="lastname" 
               autocomplete="off"
               placeholder="Lastname"
-              onblur="validar(this)" 
-              onkeyup="validar(this)"
-              validarLong(this, 3)
               required
+              oninput="validateName(this)"
               >
             </div>
           </div>
@@ -53,10 +50,8 @@
           name="username"
           autocomplete="off"
           placeholder="Username"
-          onblur="validar(this)" 
-          onkeyup="validar(this)"
-          validarLong(this, 3)
           required
+          oninput="validateName(this)"
               >
           </div>
           <input 
@@ -64,20 +59,16 @@
           name="email" 
           autocomplete="off"
           placeholder="Email"
-          onblur="validar(this)" 
-          onkeyup="validar(this)" 
-          validarLong(this, 9)
           required
+          oninput="validateEmail(this)"
           >
           <input 
           type="password" 
           name="password" 
           autocomplete="off"
           placeholder="Password"
-          onblur="validar(this)" 
-          onkeyup="validar(this)" 
-          validarLong (this, 6)
           required
+          oninput="validatePassword(this)"
           >
           <div class="button" >
             <button type="submit" class="btn"><a href="index.php">Create</a></button>
@@ -85,7 +76,7 @@
           
         </div>
       </form>
-    </div>
+
 
     <div class="table">
         <div class="tittle-users">
@@ -123,46 +114,5 @@
       </div>
 
 </body>
-
-<!--VALIDACION DE CAMPOS-->
-
-<script type="text/javascript">
-            function validar(elemento) {
-                if(elemento.value==''){
-                    elemento.className="error";
-                }else{
-                    elemento.className="input";
-                }
-            } 
-            
-            // function validar(elemento){
-            //     if(elemento.value.length < 9){
-            //         var data = elemento.className='error';
-            //     }else{
-            //         elemento.className='input';
-            //     }
-            // }
-
-            // function validarPass(elemento){
-            //     if(elemento.value.length < 6){
-            //         var data = elemento.className='error';
-            //     }else{
-            //         elemento.className='input';
-            //     }
-            // }
-    
-            function validarLong(elemento,min){
-                if(elemento.value==''){
-                    var data = elemento.value;
-                    if(data.length<min){
-                        elemento.className='error';
-                    }else{
-                        elemento.className='input';
-                    }
-                }
-            }
-    
-            
-        </script>
 
 </html>
